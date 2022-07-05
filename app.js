@@ -14,18 +14,14 @@ var popupContentRed = document.getElementById("popup-red-content");
 var popupContentBlue = document.getElementById("popup-blue-content");
 var catalogoImgRed = document.getElementById("catalogo-img-red");
 var catalogoImgBlue = document.getElementById("catalogo-img-blue");
-var map = document.getElementById('map')
-
-/* Header scroll */
-window.addEventListener("scroll", function () {
-    var header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 600);
-  });
-  
+var map = document.getElementById("map");
+var toggle = document.getElementById("menu-toggle");
+var nav = document.getElementById("nav");
 
 /* Customize cursor function */
 
 function cursorMouseMove(event) {
+  console.log(event)
   let locationX = event.pageX;
   let locationY = event.pageY;
 
@@ -33,13 +29,29 @@ function cursorMouseMove(event) {
   cursor.style.left = locationX + "px";
 }
 document.addEventListener("mousemove", cursorMouseMove);
-window.addEventListener("scroll", cursorMouseMove)
+document.addEventListener("scroll", cursorMouseMove);
+
 document.addEventListener("click", function (event) {
   let locationY = event.pageY;
   console.log(locationY);
 });
 
+/* Nav */
+toggle.addEventListener("click", function () {
+  nav.style.display = "flex";
 
+  setTimeout(function () {
+    nav.style.opacity = 1;
+  }, 100);
+});
+
+function closeNav() {
+  nav.style.opacity = 0;
+
+  setTimeout(function () {
+    nav.style.display = "none";
+  }, 300);
+}
 
 /* arrowDown Cursor */
 scrollbottomArea.addEventListener("mouseenter", function () {
@@ -53,7 +65,6 @@ scrollbottomArea.addEventListener("mouseleave", function () {
 scrollbottomArea.addEventListener("click", function () {
   aboutSect.scrollIntoView({ behavior: "smooth" });
 });
-
 
 /* Eye Cursor */
 catalogoImgRed.addEventListener("mouseenter", function () {
@@ -73,26 +84,21 @@ catalogoImgBlue.addEventListener("mouseleave", function () {
   cursorIside.style.border = "0.2em dashed rgba(0,0,0,0.7)";
 });
 
-
 /* Parallax Effect */
 window.addEventListener("scroll", function () {
   let value = window.scrollY;
   txtHome.style.top = value * 0.5 + "px";
-  imgBox.style.width = value * 0.65 + "px";
-  imgBoxCatalogo.style.width = value * 0.3 + "px";
-  map.style.width = value * 0.3 + 'px'
 });
 
-document.addEventListener('mousemove', function(e){
-    var mock = document.getElementById('mock')
-    const speed = -2
+document.addEventListener("mousemove", function (e) {
+  var mock = document.getElementById("mock");
+  const speed = -2;
 
-    const x = (window.innerWidth - e.pageX*speed)/100
-    const y = (window.innerHeight -  e.pageY*speed)/100
-                                        
-                                        
-    mock.style.transform=`translateX(${x}px) translateY(${y}px)`
-})
+  const x = (window.innerWidth - e.pageX * speed) / 100;
+  const y = (window.innerHeight - e.pageY * speed) / 100;
+
+  mock.style.transform = `translateX(${x}px) translateY(${y}px)`;
+});
 
 /* Close and Open Pop-Up */
 function popUpCloseRed() {
