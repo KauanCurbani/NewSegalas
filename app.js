@@ -3,6 +3,7 @@ var cursorIside = document.getElementById("cursorRotate");
 var scrollbottomArea = document.getElementById("space-scrollbottom");
 var bottomMouseIcon = document.getElementById("bottom-icon");
 var eyeMouseIcon = document.getElementById("eye-icon");
+var LinkMouseIcon = document.getElementById("link-icon");
 var homeSect = document.getElementById("home");
 var txtHome = document.getElementById("textHome");
 var aboutSect = document.getElementById("about");
@@ -17,6 +18,7 @@ var catalogoImgBlue = document.getElementById("catalogo-img-blue");
 var map = document.getElementById("map");
 var toggle = document.getElementById("menu-toggle");
 var nav = document.getElementById("nav");
+var formButton = document.getElementById('form-button')
 
 /* Customize cursor function */
 
@@ -43,20 +45,9 @@ document.addEventListener("click", function (event) {
 });
 
 /* Nav */
-toggle.addEventListener("click", function () {
-  nav.style.display = "flex";
-
-  setTimeout(function () {
-    nav.style.opacity = 1;
-  }, 100);
-});
-
-function closeNav() {
-  nav.style.opacity = 0;
-
-  setTimeout(function () {
-    nav.style.display = "none";
-  }, 300);
+toggle.addEventListener("click", toggleFunc);
+function toggleFunc() {
+  toggle.classList.toggle("showMenu");
 }
 
 /* arrowDown Cursor */
@@ -75,20 +66,26 @@ scrollbottomArea.addEventListener("click", function () {
 /* Eye Cursor */
 catalogoImgRed.addEventListener("mouseenter", function () {
   eyeMouseIcon.style.opacity = 1;
-  cursorIside.style.border = "0.2em dashed rgba(255,255,255,0.7)";
 });
 catalogoImgRed.addEventListener("mouseleave", function () {
   eyeMouseIcon.style.opacity = 0;
-  cursorIside.style.border = "0.2em dashed rgba(0,0,0,0.7)";
 });
 catalogoImgBlue.addEventListener("mouseenter", function () {
   eyeMouseIcon.style.opacity = 1;
-  cursorIside.style.border = "0.2em dashed rgba(255,255,255,0.7)";
 });
 catalogoImgBlue.addEventListener("mouseleave", function () {
   eyeMouseIcon.style.opacity = 0;
-  cursorIside.style.border = "0.2em dashed rgba(0,0,0,0.7)";
 });
+
+
+/* link cursor */
+formButton.addEventListener("mouseenter", function () {
+  LinkMouseIcon.style.opacity = 1;
+});
+formButton.addEventListener("mouseleave", function () {
+  LinkMouseIcon.style.opacity = 0;
+});
+
 
 /* Parallax Effect */
 window.addEventListener("scroll", function () {
