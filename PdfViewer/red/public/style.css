@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background: url("./Desktop\ -\ 1.png");
+  background-size: cover;
+  background-position: left center;
+}
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: transparent;
+  width: 100vw;
+  height: 100vh;
+}
+#content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.navigation-left {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  justify-content: left;
+  align-items: center;
+  width: 100px;
+  height: 80%;
+  z-index: 999;
+  bottom: 0;
+  border-radius: 0 10px 10px 0;
+  transform: translateY(-50%);
+}
+.navigation-left button {
+  width: 100%;
+  height: 100vh;
+  border: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  color: #e00208;
+  opacity: 0.5;
+  font-size: 3em;
+  font-weight: 900;
+}
+.navigation-right {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  justify-content: right;
+  align-items: center;
+  width: 100px;
+  height: 80%;
+  z-index: 999;
+  bottom: 0;
+  border-radius: 10px 0 0 10px;
+  transform: translateY(-50%);
+  opacity: 0.5;
+}
+.navigation-right button {
+  border: 2px solid #e00208;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  color: #e00208;
+  font-size: 3em;
+  font-weight: 900;
+}
+
+.navigation {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+
+.navigation .buttonHome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  background-color: #e00208;
+  border: none;
+  transition: 0.3s ease;
+}
+.navigation .buttonHome:hover {
+  transform: scale(1.1);
+}
+.noPull {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 500;
+}
+
+@media (min-width: 600px) {
+  .noPull {
+    display: none;
+    z-index: 500;
+    background-color: #e00208;
+    width: 0%;
+  }
+}
