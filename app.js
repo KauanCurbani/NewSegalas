@@ -20,8 +20,14 @@ var nav = document.getElementById("nav");
 
 /* Customize cursor function */
 
+function cursorMouseScroll(event) {
+  var x = event.clientX; // Get the horizontal coordinate
+  var y = event.clientY; // Get the vertical coordinate
+  var coor = "X coords: " + x + ", Y coords: " + y;
+  console.log(coor);
+}
+
 function cursorMouseMove(event) {
-  console.log(event)
   let locationX = event.pageX;
   let locationY = event.pageY;
 
@@ -29,7 +35,7 @@ function cursorMouseMove(event) {
   cursor.style.left = locationX + "px";
 }
 document.addEventListener("mousemove", cursorMouseMove);
-document.addEventListener("scroll", cursorMouseMove);
+document.addEventListener("scroll", cursorMouseScroll);
 
 document.addEventListener("click", function (event) {
   let locationY = event.pageY;
