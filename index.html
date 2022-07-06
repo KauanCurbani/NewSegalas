@@ -50,7 +50,7 @@
     <!-- ABOUT -->
 
     <div class="about" id="about">
-      <div class="about-left">
+      <div class="about-left reveal-left">
         <div class="img" id="img-box-about">
           <div class="fixed-img"></div>
         </div>
@@ -87,7 +87,7 @@
 <!--                 <iframe src="PdfViewer/blue/public/index.html" frameborder="0"></iframe>
  -->            </div>
         </div>
-      <div class="catalogos-sect">
+      <div class="catalogos-sect reveal-right">
         <div class="catalogo-text">
             <h1>Nossos <span>Catálogos</span></h1>
             <p>Possuímos um mix com mais de 2 mil produtos, nacionais e importados, com a opção certa para seu negócio. Venha conferir nossa linha completa, acessando nossos catálogos abaixo:</p>
@@ -156,5 +156,23 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+      var slideRight = {
+        distance: '15%',
+        origin: 'left',
+        opacity: null,
+        duration: 1500,
+      };
+      var slideLeft = {
+        distance: '15%',
+        origin: 'right',
+        opacity: null,
+        duration: 1500,
+      };
+      ScrollReveal().reveal('.reveal-left', slideRight);
+      ScrollReveal().reveal('.reveal-right', slideLeft);
+    </script>
   </body>
 </html>

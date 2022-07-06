@@ -18,6 +18,10 @@ var map = document.getElementById("map");
 var toggle = document.getElementById("menu-toggle");
 var nav = document.getElementById("nav");
 
+
+
+
+
 /* Customize cursor function */
 
 function cursorMouseScroll(event) {
