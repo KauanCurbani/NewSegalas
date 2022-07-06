@@ -17,22 +17,25 @@
       <ion-icon id="link-icon" class="icon-mouse" name="link"></ion-icon>
       <ion-icon id="eye-icon" class="icon-mouse" name="eye"></ion-icon>
     </div>
-<!--     <div class="mouse" id="cursorDiv">
+    <!--     <div class="mouse" id="cursorDiv">
        <div class="cursor" id="cursorRotate">
       </div>
     </div> -->
     <div class="navigation" id="menu-toggle">
-        <div class="menu">
-            <h1>Menu</h1><ion-icon id="menu-icon" name="menu"></ion-icon>
-        </div>
+      <div class="menu">
+        <h1>Menu</h1>
+        <ion-icon id="menu-icon" name="menu"></ion-icon>
+      </div>
     </div>
     <nav id="nav">
-        <ul>
-            <li><a onclick="toggleFunc()" href="#about" >Sobre nós</a></li>
-            <li><a onclick="toggleFunc()" href="#catalogos" >Catálogos</a></li>
-            <li><a onclick="toggleFunc()" href="#atuamos" >Onde Atuamos</a></li>
-            <li><a onclick="toggleFunc()" href="#trabalheConosco" >Trabalhe Conosco</a></li>
-        </ul>
+      <ul>
+        <li><a onclick="toggleFunc()" href="#about">Sobre nós</a></li>
+        <li><a onclick="toggleFunc()" href="#catalogos">Catálogos</a></li>
+        <li><a onclick="toggleFunc()" href="#atuamos">Onde Atuamos</a></li>
+        <li>
+          <a onclick="toggleFunc()" href="#trabalheConosco">Trabalhe Conosco</a>
+        </li>
+      </ul>
     </nav>
     <!-- Hpme -->
     <div class="home" id="home">
@@ -45,9 +48,9 @@
         </p>
       </div>
       <div id="space-scrollbottom"></div>
-    </div>
-    <div class="mouse2">
-      <div class="scroll"></ion-icon></div>
+      <video id="video-mp4" preload="auto" playsinline autoplay loop muted>
+        <source type="video/mp4" src="./img/banner.mp4" />
+      </video>
     </div>
 
     <!-- ABOUT -->
@@ -78,30 +81,56 @@
       </div>
     </div>
     <div class="catalogos" id="catalogos">
-        <div class="popup-red popup" id="popup-red">
-            <div class="content" id="popup-red-content">
-                <ion-icon id="closeIcon" onclick="popUpCloseRed()" name="close-circle-outline"></ion-icon>
-<!--                 <iframe src="PdfViewer/red/public/index.html" frameborder="0"></iframe>
- -->            </div>
+      <div class="popup-red popup" id="popup-red">
+        <div class="content" id="popup-red-content">
+          <ion-icon
+            id="closeIcon"
+            onclick="popUpCloseRed()"
+            name="close-circle-outline"
+          ></ion-icon>
+          <!--                 <iframe src="PdfViewer/red/public/index.html" frameborder="0"></iframe>
+ -->
         </div>
-        <div class="popup-blue popup" id="popup-blue">
-            <div class="content" id="popup-blue-content">
-                <ion-icon id="closeIcon" onclick="popUpCloseBlue()" name="close-circle-outline"></ion-icon>
-<!--                 <iframe src="PdfViewer/blue/public/index.html" frameborder="0"></iframe>
- -->            </div>
+      </div>
+      <div class="popup-blue popup" id="popup-blue">
+        <div class="content" id="popup-blue-content">
+          <ion-icon
+            id="closeIcon"
+            onclick="popUpCloseBlue()"
+            name="close-circle-outline"
+          ></ion-icon>
+          <!--                 <iframe src="PdfViewer/blue/public/index.html" frameborder="0"></iframe>
+ -->
         </div>
+      </div>
       <div class="catalogos-sect reveal-right">
         <div class="catalogo-text">
-            <h1>Nossos <span>Catálogos</span></h1>
-            <p>Possuímos um mix com mais de 2 mil produtos, nacionais e importados, com a opção certa para seu negócio. Venha conferir nossa linha completa, acessando nossos catálogos abaixo:</p>
-            <div class="cards">
-                <div class="red">
-                    <img id="catalogo-img-red" onclick="popUpOpenRed()" src="img/catalogo-Red.jpg" alt="catalogo red" srcset="">
-                </div>
-               <div class="blue">
-                   <img id="catalogo-img-blue" onclick="popUpOpenBlue()" src="img/catalogo-Blue.jpg" alt="catalogo red" srcset="">
-               </div>
+          <h1>Nossos <span>Catálogos</span></h1>
+          <p>
+            Possuímos um mix com mais de 2 mil produtos, nacionais e importados,
+            com a opção certa para seu negócio. Venha conferir nossa linha
+            completa, acessando nossos catálogos abaixo:
+          </p>
+          <div class="cards">
+            <div class="red">
+              <img
+                id="catalogo-img-red"
+                onclick="popUpOpenRed()"
+                src="img/catalogo-Red.jpg"
+                alt="catalogo red"
+                srcset=""
+              />
             </div>
+            <div class="blue">
+              <img
+                id="catalogo-img-blue"
+                onclick="popUpOpenBlue()"
+                src="img/catalogo-Blue.jpg"
+                alt="catalogo red"
+                srcset=""
+              />
+            </div>
+          </div>
         </div>
         <div class="imgCatalogos" id="img-box-catalogos">
           <div class="fixed-img-catalogos"></div>
@@ -109,46 +138,78 @@
       </div>
     </div>
     <div class="atuamos" id="atuamos">
-        <div class="atuamos-sect">
-            <div class="map" id="map">
-                <svg width="614" height="724" viewBox="0 0 614 724" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M243 228L250 239.5H254.5L258 241L263 241.5L265.5 239.5L268.5 238H272.5L276.5 239.5L279.5 241.5L283.5 245.5L288 248H296.5H304.5H313L319 248.5L323.5 250L334.5 252L338 253.5L342 255.5H345L349 256.5H353.5L358 258L361.5 260L363.5 261.5L367 262.5H372L376.5 261.5L382 260L387.5 261.5L391.5 265.5L396 267L401.5 265.5L405 263.5V258V251V247L408.5 241L416 238H420L427 241H432L437 238L442.5 232.5L445 228L451.5 224.5H457.5L461 228H467.5L476.5 226L487 224.5H493.5L499 228L505 232.5L511 236.5L516.5 238L524 236.5L534.5 228L546 222L555.5 220.5H578L579.5 218L576 215.5V213L583 211.5L587 206L589 202.5C589 201 588.6 197.7 587 196.5C585.4 195.3 583.667 194.667 583 194.5L576 192H572V187.5L576 189.5H581.5L587 187.5V181.5L590.5 178.5H594.5V181.5V187.5H598.5V181.5H601.5V184L600 187.5L601.5 189.5L605 187.5L609.5 181.5L613.5 178.5V175H605L601.5 167.5L596.5 162H585L583 165.5L579.5 167.5L576 165.5V162L579.5 157L581.5 144.5L579.5 137.5H574L570.5 139H558.5L553.5 141L549 139H542.5L536.5 141L531.5 139V109L527.5 102L520 94.5L515 88.5L516.5 86V77.5L513.5 70L511 62.5V53V46.5L506 39L501 34L495.5 28.5L489.5 26H470H461L454 28.5L448 26L441.5 24.5L433.5 22.5H428H420.5L413.5 20L409 15.5L402 11.5L399.5 9.5L393 8H388.5L384 11.5H379H375L371 8H367.5L363 5.5L356.5 3L352 1.5L348.5 3L345 5.5H340H336L332.5 8H327.5L321 5.5H308.5H301.5L299.5 3L295.5 0H292L287.5 1.5L285.5 5.5V8L280.5 11.5L263.5 18L253.5 22.5L247.5 28.5L246 44L243 52.5L238.5 57.5L231 62L226 72V81L223.5 88.5L219.5 94L214 98.5L210 103V107.5L212 115.5L215 120L214 124L212 132.5L217.5 137.5L216.5 140L212 142L210 145.5L214 148L216.5 151L215 153L212 151H207.5V160.5H215V163.5H207.5V171.5H210H215L217.5 173.5C216.833 174.833 215.4 177.5 215 177.5H207.5L204 181L198.5 182.5L193 186.5V191L198.5 194H207.5L212 191H219.5L226 194L233.5 200L240 207.5V217.5L243 228Z" fill="#E00208"/>
-                    <path d="M241 300.5L236.5 298.5L231.5 297L227.5 298.5L225.5 302H221H213.5V306.5L211 309.5L208 312L205.5 314H198V317.5H192V320.5H187H183L176.5 323L171 327.5L168 332.5V338H160.5V344.5H151H147.5L142.5 350L131.5 361.5H125.5H121.5L119.5 364L117 367V374H119.5V379.5L115.5 377L113 374H110L107 377L105 382L101 390L95.5 393.5L90 397L80.5 402.5V410L69 424H63.5L60 428L58.5 434.5L40.5 454.5L30.5 465H24L17 468L12.5 471.5V480.5L9.5 484.5L4.5 486L1.5 489L0.5 491.5L1.5 496.5H4.5H8V499H14.5V496.5H26V493L28 490L32.5 486L40.5 484.5L51.5 487.5L58.5 494.5L66.5 502.5L72 505L78.5 513L86.5 515.5L92 525L95.5 533.5L100 538L102 545L105 549.5H112L118.5 545L123 540.5L130.5 538L139.5 547L146 559.5L158.5 567.5L168 569.5L177.5 576H188L195 579L201 589L207 596.5L215.5 600.5L228.5 604L237 612.5L244 622.5L248.5 630.5L252 641.5H258L268 650L275.5 651.5L277.5 658L275.5 666L273 671L268.5 677L261.5 681L258 687V711.5L261.5 714.5L263.5 722L266.5 724L273 722L277.5 717L283.5 711.5L291.5 707.5L301 700L309 693L315.5 685L319 677L322 671L330 658V647.5L333.5 641.5L339 630.5L347.5 622.5L356.5 615L380 598.5L387 596.5L404 583L422.5 567.5L434.5 557L444.5 542L451 531.5L456.5 525.5L466.5 511L475 499L477 486.5L482.5 476.5L492 460L504 442.5L499 441L498.5 438V435.5L497.5 432.5L496 430.5L492 431L488.5 432.5L484.5 435.5L482.5 439.5L481 440L478.5 439.5L477 438L476 433.5L477 429.5L480 425L483.5 419L487 414.5L489.5 411.5V407.5L491 404L496 399.5L501.5 395.5L505 393V391L501.5 388.5L496 386.5L487 385L475 383.5H466.5L456.5 381L448.5 377.5L440 369.5L432.5 362.5L422.5 353L416.5 347L414.5 341.5H409L401 335V328.5H393.5L388.5 326.5L384 324L379.5 322H375H369H364.5L360 318.5L358.5 315L356 311.5H352H347.5H345L340 308H332L330 306.5H311.5L303 303.5L295 302L292 300.5L277.5 302L276 300.5L274 298.5H268.5L260 303.5H254L249.5 300.5H241Z" fill="#E00208"/>
-                    <path d="M261.5 243H252.5L249 251L246.5 255.5L244 259.5L246.5 265.5L249 271.5V282.5V286.5L246.5 291.5L244 297.5H249L252.5 299H259L261.5 297.5L265 295.5L269 294.5L273.5 295.5L276.5 297.5H282.5H289.5L294 299L298 301H303.5L313 303.5L330 304.5H334L344 306.5L347 309H353.5L358.5 310L361 312L363.5 315.5L365.5 318.5L369 319.5L373 318.5H380L384.5 321L390.5 323.5L394.5 326.5L403.5 327.5V329.5L405.5 334L408 336.5L413 339L416.5 340.5L419.5 346L450.5 375L454.5 376.5L458 378.5L465 380L481 381L494.5 382.5L505 385L510 390L508 394.5L504 398.5L496.5 403.5L492 408V412.5L489.5 415.5L486 419L481 427L479.5 431L478 434L481 436L483 432.5L488 428.5L492 427H495.5L498.5 429.5L500.5 434L501.5 439H504L510 429.5L514 427L521 419L526.5 415.5L532 409H537L549 400L568 390V378.5L572.5 373.5V368L575 366.5V349.5L576.5 347.5V317.5L578.5 314.5L580 312L578.5 307H576.5V302.5H580H582.5L585 299H582.5L580 300L576.5 299L574 295.5L577.5 292.5L574 288L572.5 285.5V281.5V272V263.5V258.5L570.5 252.5L566 247.5L562.5 243V232H569V235.5L570.5 238.5H574L577.5 232V223.5H553L547.5 227L539.5 229.5L533.5 232L528.5 238.5L520 241H513.5L508 237L500.5 232L492.5 227H485H480L476 229.5H472.5H468.5L462.5 232L457 229.5L454 227L449.5 229.5L446 234L441 238.5L433 243H426.5L417 241L411.5 243L408 247.5L406.5 255.5V263.5L404.5 266.5L402.5 269H399.5H394.5L390.5 266.5L385.5 263.5H382H378.5L376.5 265.5H367L362 263.5L353 258.5H343.5L334 255.5L321.5 253L316.5 251H308.5H294H285.5L280.5 247.5L274.5 243L271.5 241H267.5L264 244.5L261.5 243Z" fill="#E00208"/>
-                </svg>
-            </div>
-            <div class="atuacao-text">
-                <h1>Onde <span>Atuamos</span></h1>
-                <p>
-                    A Segala’s atua em todo estado de Santa Catarina, Paraná e em algumas cidades do Rio Grande do Sul. Estamos expandindo cada dia mais nossa área de atuação para entregar confiança em todo Brasil!
-                </p>
-            </div>
+      <div class="atuamos-sect">
+        <div class="map" id="map">
+          <svg
+            width="614"
+            height="724"
+            viewBox="0 0 614 724"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M243 228L250 239.5H254.5L258 241L263 241.5L265.5 239.5L268.5 238H272.5L276.5 239.5L279.5 241.5L283.5 245.5L288 248H296.5H304.5H313L319 248.5L323.5 250L334.5 252L338 253.5L342 255.5H345L349 256.5H353.5L358 258L361.5 260L363.5 261.5L367 262.5H372L376.5 261.5L382 260L387.5 261.5L391.5 265.5L396 267L401.5 265.5L405 263.5V258V251V247L408.5 241L416 238H420L427 241H432L437 238L442.5 232.5L445 228L451.5 224.5H457.5L461 228H467.5L476.5 226L487 224.5H493.5L499 228L505 232.5L511 236.5L516.5 238L524 236.5L534.5 228L546 222L555.5 220.5H578L579.5 218L576 215.5V213L583 211.5L587 206L589 202.5C589 201 588.6 197.7 587 196.5C585.4 195.3 583.667 194.667 583 194.5L576 192H572V187.5L576 189.5H581.5L587 187.5V181.5L590.5 178.5H594.5V181.5V187.5H598.5V181.5H601.5V184L600 187.5L601.5 189.5L605 187.5L609.5 181.5L613.5 178.5V175H605L601.5 167.5L596.5 162H585L583 165.5L579.5 167.5L576 165.5V162L579.5 157L581.5 144.5L579.5 137.5H574L570.5 139H558.5L553.5 141L549 139H542.5L536.5 141L531.5 139V109L527.5 102L520 94.5L515 88.5L516.5 86V77.5L513.5 70L511 62.5V53V46.5L506 39L501 34L495.5 28.5L489.5 26H470H461L454 28.5L448 26L441.5 24.5L433.5 22.5H428H420.5L413.5 20L409 15.5L402 11.5L399.5 9.5L393 8H388.5L384 11.5H379H375L371 8H367.5L363 5.5L356.5 3L352 1.5L348.5 3L345 5.5H340H336L332.5 8H327.5L321 5.5H308.5H301.5L299.5 3L295.5 0H292L287.5 1.5L285.5 5.5V8L280.5 11.5L263.5 18L253.5 22.5L247.5 28.5L246 44L243 52.5L238.5 57.5L231 62L226 72V81L223.5 88.5L219.5 94L214 98.5L210 103V107.5L212 115.5L215 120L214 124L212 132.5L217.5 137.5L216.5 140L212 142L210 145.5L214 148L216.5 151L215 153L212 151H207.5V160.5H215V163.5H207.5V171.5H210H215L217.5 173.5C216.833 174.833 215.4 177.5 215 177.5H207.5L204 181L198.5 182.5L193 186.5V191L198.5 194H207.5L212 191H219.5L226 194L233.5 200L240 207.5V217.5L243 228Z"
+              fill="#E00208"
+            />
+            <path
+              d="M241 300.5L236.5 298.5L231.5 297L227.5 298.5L225.5 302H221H213.5V306.5L211 309.5L208 312L205.5 314H198V317.5H192V320.5H187H183L176.5 323L171 327.5L168 332.5V338H160.5V344.5H151H147.5L142.5 350L131.5 361.5H125.5H121.5L119.5 364L117 367V374H119.5V379.5L115.5 377L113 374H110L107 377L105 382L101 390L95.5 393.5L90 397L80.5 402.5V410L69 424H63.5L60 428L58.5 434.5L40.5 454.5L30.5 465H24L17 468L12.5 471.5V480.5L9.5 484.5L4.5 486L1.5 489L0.5 491.5L1.5 496.5H4.5H8V499H14.5V496.5H26V493L28 490L32.5 486L40.5 484.5L51.5 487.5L58.5 494.5L66.5 502.5L72 505L78.5 513L86.5 515.5L92 525L95.5 533.5L100 538L102 545L105 549.5H112L118.5 545L123 540.5L130.5 538L139.5 547L146 559.5L158.5 567.5L168 569.5L177.5 576H188L195 579L201 589L207 596.5L215.5 600.5L228.5 604L237 612.5L244 622.5L248.5 630.5L252 641.5H258L268 650L275.5 651.5L277.5 658L275.5 666L273 671L268.5 677L261.5 681L258 687V711.5L261.5 714.5L263.5 722L266.5 724L273 722L277.5 717L283.5 711.5L291.5 707.5L301 700L309 693L315.5 685L319 677L322 671L330 658V647.5L333.5 641.5L339 630.5L347.5 622.5L356.5 615L380 598.5L387 596.5L404 583L422.5 567.5L434.5 557L444.5 542L451 531.5L456.5 525.5L466.5 511L475 499L477 486.5L482.5 476.5L492 460L504 442.5L499 441L498.5 438V435.5L497.5 432.5L496 430.5L492 431L488.5 432.5L484.5 435.5L482.5 439.5L481 440L478.5 439.5L477 438L476 433.5L477 429.5L480 425L483.5 419L487 414.5L489.5 411.5V407.5L491 404L496 399.5L501.5 395.5L505 393V391L501.5 388.5L496 386.5L487 385L475 383.5H466.5L456.5 381L448.5 377.5L440 369.5L432.5 362.5L422.5 353L416.5 347L414.5 341.5H409L401 335V328.5H393.5L388.5 326.5L384 324L379.5 322H375H369H364.5L360 318.5L358.5 315L356 311.5H352H347.5H345L340 308H332L330 306.5H311.5L303 303.5L295 302L292 300.5L277.5 302L276 300.5L274 298.5H268.5L260 303.5H254L249.5 300.5H241Z"
+              fill="#E00208"
+            />
+            <path
+              d="M261.5 243H252.5L249 251L246.5 255.5L244 259.5L246.5 265.5L249 271.5V282.5V286.5L246.5 291.5L244 297.5H249L252.5 299H259L261.5 297.5L265 295.5L269 294.5L273.5 295.5L276.5 297.5H282.5H289.5L294 299L298 301H303.5L313 303.5L330 304.5H334L344 306.5L347 309H353.5L358.5 310L361 312L363.5 315.5L365.5 318.5L369 319.5L373 318.5H380L384.5 321L390.5 323.5L394.5 326.5L403.5 327.5V329.5L405.5 334L408 336.5L413 339L416.5 340.5L419.5 346L450.5 375L454.5 376.5L458 378.5L465 380L481 381L494.5 382.5L505 385L510 390L508 394.5L504 398.5L496.5 403.5L492 408V412.5L489.5 415.5L486 419L481 427L479.5 431L478 434L481 436L483 432.5L488 428.5L492 427H495.5L498.5 429.5L500.5 434L501.5 439H504L510 429.5L514 427L521 419L526.5 415.5L532 409H537L549 400L568 390V378.5L572.5 373.5V368L575 366.5V349.5L576.5 347.5V317.5L578.5 314.5L580 312L578.5 307H576.5V302.5H580H582.5L585 299H582.5L580 300L576.5 299L574 295.5L577.5 292.5L574 288L572.5 285.5V281.5V272V263.5V258.5L570.5 252.5L566 247.5L562.5 243V232H569V235.5L570.5 238.5H574L577.5 232V223.5H553L547.5 227L539.5 229.5L533.5 232L528.5 238.5L520 241H513.5L508 237L500.5 232L492.5 227H485H480L476 229.5H472.5H468.5L462.5 232L457 229.5L454 227L449.5 229.5L446 234L441 238.5L433 243H426.5L417 241L411.5 243L408 247.5L406.5 255.5V263.5L404.5 266.5L402.5 269H399.5H394.5L390.5 266.5L385.5 263.5H382H378.5L376.5 265.5H367L362 263.5L353 258.5H343.5L334 255.5L321.5 253L316.5 251H308.5H294H285.5L280.5 247.5L274.5 243L271.5 241H267.5L264 244.5L261.5 243Z"
+              fill="#E00208"
+            />
+          </svg>
         </div>
+        <div class="atuacao-text">
+          <h1>Onde <span>Atuamos</span></h1>
+          <p>
+            A Segala’s atua em todo estado de Santa Catarina, Paraná e em
+            algumas cidades do Rio Grande do Sul. Estamos expandindo cada dia
+            mais nossa área de atuação para entregar confiança em todo Brasil!
+          </p>
+        </div>
+      </div>
     </div>
     <div class="trabalheConosco">
-        <div class="img-hand">
-            <img src="img/mockForm (1).png" id="mock" alt="">
-        </div>
-        <div class="trabalheConosco-text" id="trabalheConosco">
-            <h1>Trabalhe <span>Conosco</span></h1>
-            <h3>Quer fazer parte da equipe <span>Segala’s?</span></h3>
-            <p> Estamos crescendo e sempre em busca de profissionais que queiram agregar nosso time. Se você tem um perfil motivado, adora desafios e gosta de fazer a diferença queremos conhecê-lo. Envie seu currículo usando nosso formulário. Ficamos felizes com seu interesse em fazer parte da nossa equipe!</p>
-            <a id="form-button" href="https://formfacade.com/public/101314879276563438494/all/form/1FAIpQLSdAjg7vOeIPnoUqEZQGw5Ss3DqGVOdWSaD7goB-jIOC0K_v6g" target="_blank">Formulário</a>
-        </div>
+      <div class="img-hand">
+        <img src="img/mockForm (1).png" id="mock" alt="" />
+      </div>
+      <div class="trabalheConosco-text" id="trabalheConosco">
+        <h1>Trabalhe <span>Conosco</span></h1>
+        <h3>Quer fazer parte da equipe <span>Segala’s?</span></h3>
+        <p>
+          Estamos crescendo e sempre em busca de profissionais que queiram
+          agregar nosso time. Se você tem um perfil motivado, adora desafios e
+          gosta de fazer a diferença queremos conhecê-lo. Envie seu currículo
+          usando nosso formulário. Ficamos felizes com seu interesse em fazer
+          parte da nossa equipe!
+        </p>
+        <a
+          id="form-button"
+          href="https://formfacade.com/public/101314879276563438494/all/form/1FAIpQLSdAjg7vOeIPnoUqEZQGw5Ss3DqGVOdWSaD7goB-jIOC0K_v6g"
+          target="_blank"
+          >Formulário</a
+        >
+      </div>
     </div>
     <footer>
-        <div class="img-footer">
-            <img src="img/s-branco.png" alt="">
-            <p>Rod Ingo Hering (BR470), 18370,<br>
-                Belchior Central Gaspar - SC, 89117-540<br>
-                (47)3036-1400</p>
-        </div>
-        <div class="social">
-            <p><ion-icon name="logo-facebook"></ion-icon> Facebook</p>
-            <p><ion-icon name="logo-instagram"></ion-icon> Instagram</p>
-            <p><ion-icon name="logo-linkedin"></ion-icon> Linkedin</p>
-        </div>
-        <div class="copy"><p>©2022 Segala's Alimentos | Todos os direitos reservados</p></div>
+      <div class="img-footer">
+        <img src="img/s-branco.png" alt="" />
+        <p>
+          Rod Ingo Hering (BR470), 18370,<br />
+          Belchior Central Gaspar - SC, 89117-540<br />
+          (47)3036-1400
+        </p>
+      </div>
+      <div class="social">
+        <p><ion-icon name="logo-facebook"></ion-icon> Facebook</p>
+        <p><ion-icon name="logo-instagram"></ion-icon> Instagram</p>
+        <p><ion-icon name="logo-linkedin"></ion-icon> Linkedin</p>
+      </div>
+      <div class="copy">
+        <p>©2022 Segala's Alimentos | Todos os direitos reservados</p>
+      </div>
     </footer>
     <script src="app.js"></script>
     <script
@@ -163,19 +224,19 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
       var slideRight = {
-        distance: '15%',
-        origin: 'left',
+        distance: "15%",
+        origin: "left",
         opacity: null,
         duration: 1500,
       };
       var slideLeft = {
-        distance: '15%',
-        origin: 'right',
+        distance: "15%",
+        origin: "right",
         opacity: null,
         duration: 1500,
       };
-      ScrollReveal().reveal('.reveal-left', slideRight);
-      ScrollReveal().reveal('.reveal-right', slideLeft);
+      ScrollReveal().reveal(".reveal-left", slideRight);
+      ScrollReveal().reveal(".reveal-right", slideLeft);
     </script>
   </body>
 </html>
