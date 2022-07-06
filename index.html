@@ -15,6 +15,7 @@
           class="icon-mouse"
           name="arrow-down"
         ></ion-icon>
+        <ion-icon id="link-icon" class="icon-mouse" name="link"></ion-icon>
         <ion-icon id="eye-icon" class="icon-mouse" name="eye"></ion-icon>
       </div>
     </div>
@@ -25,10 +26,10 @@
     </div>
     <nav id="nav">
         <ul>
-            <li><a href="#about" >Sobre nós</a></li>
-            <li><a href="#catalogos" >Catálogos</a></li>
-            <li><a href="#atuamos" >Onde Atuamos</a></li>
-            <li><a href="#trabalheConosco" >Trabalhe Conosco</a></li>
+            <li><a onclick="toggleFunc()" href="#about" >Sobre nós</a></li>
+            <li><a onclick="toggleFunc()" href="#catalogos" >Catálogos</a></li>
+            <li><a onclick="toggleFunc()" href="#atuamos" >Onde Atuamos</a></li>
+            <li><a onclick="toggleFunc()" href="#trabalheConosco" >Trabalhe Conosco</a></li>
         </ul>
     </nav>
     <!-- Hpme -->
@@ -130,7 +131,7 @@
             <h1>Trabalhe <span>Conosco</span></h1>
             <h3>Quer fazer parte da equipe <span>Segala’s?</span></h3>
             <p> Estamos crescendo e sempre em busca de profissionais que queiram agregar nosso time. Se você tem um perfil motivado, adora desafios e gosta de fazer a diferença queremos conhecê-lo. Envie seu currículo usando nosso formulário. Ficamos felizes com seu interesse em fazer parte da nossa equipe!</p>
-            <a href="https://formfacade.com/public/101314879276563438494/all/form/1FAIpQLSdAjg7vOeIPnoUqEZQGw5Ss3DqGVOdWSaD7goB-jIOC0K_v6g" target="_blank">Formulário</a>
+            <a id="form-button" href="https://formfacade.com/public/101314879276563438494/all/form/1FAIpQLSdAjg7vOeIPnoUqEZQGw5Ss3DqGVOdWSaD7goB-jIOC0K_v6g" target="_blank">Formulário</a>
         </div>
     </div>
     <footer>

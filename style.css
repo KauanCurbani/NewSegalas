@@ -18,7 +18,6 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
 body {
   overflow-x: hidden;
@@ -176,7 +175,7 @@ nav ul li a {
 .home #textHome h1 {
   position: relative;
   font-size: 5em;
-  color: #f4f5f9;
+  color: #fff;
   font-weight: 700;
   font-style: italic;
   padding-bottom: 10px;
@@ -432,8 +431,8 @@ nav ul li a {
   box-shadow: -12px 5px 24px -3px rgba(0, 0, 0, 0.2),
     -25px 12px 68px -38px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  margin: 10px;
-  height: 350px;
+  margin: 0 10px;
+  height: 300px;
   overflow: hidden;
   position: relative;
   z-index: 0;
@@ -586,6 +585,10 @@ footer .copy {
   .cursor {
     display: none;
   }
+  .home{
+    background-size: cover;
+    background-position: center;
+  }
   .home #textHome {
     width: 90%;
   }
@@ -685,17 +688,28 @@ footer .copy {
   footer .copy {
     text-align: center;
   }
-  nav ul {
+  .navigation {
     display: flex;
+  }
+  nav {
+    padding-left: 30px;
+    justify-content: start;
+    display: flex;
+    width: 100%;
+    height: 33vh;
+    padding: 30px;
+    transform: translateY(-100%);
+  }
+  .navigation.showMenu ~ nav {
+    transform: translateY(0%);
+  }
+  nav ul {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(1deg);
   }
   nav ul li {
-    font-size: 0.5em;
+    margin: 10px 0;
   }
-  .navigation{
-    display: flex;
+  nav ul li a {
+    font-size: 28px;
   }
 }
