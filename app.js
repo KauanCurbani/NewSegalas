@@ -1,4 +1,4 @@
-var cursor = document.getElementById("cursorDiv");
+var cursor = document.getElementById("cursor-Icons");
 var cursorIside = document.getElementById("cursorRotate");
 var scrollbottomArea = document.getElementById("space-scrollbottom");
 var bottomMouseIcon = document.getElementById("bottom-icon");
@@ -26,12 +26,12 @@ var formButton = document.getElementById('form-button')
 
 /* Customize cursor function */
 
-function cursorMouseScroll(event) {
+/* function cursorMouseScroll(event) {
   var x = event.clientX; // Get the horizontal coordinate
   var y = event.clientY; // Get the vertical coordinate
   var coor = "X coords: " + x + ", Y coords: " + y;
   console.log(coor);
-}
+} */
 
 function cursorMouseMove(event) {
   let locationX = event.pageX;
@@ -39,14 +39,15 @@ function cursorMouseMove(event) {
 
   cursor.style.top = locationY + "px";
   cursor.style.left = locationX + "px";
+  console.log(locationX);
 }
 document.addEventListener("mousemove", cursorMouseMove);
-document.addEventListener("scroll", cursorMouseScroll);
-
+/* document.addEventListener("scroll", cursorMouseScroll); */
+/* 
 document.addEventListener("click", function (event) {
   let locationY = event.pageY;
   console.log(locationY);
-});
+}); */
 
 /* Nav */
 toggle.addEventListener("click", toggleFunc);
@@ -58,10 +59,12 @@ function toggleFunc() {
 scrollbottomArea.addEventListener("mouseenter", function () {
   bottomMouseIcon.style.opacity = 1;
   bottomMouseIcon.style.color = "#f4f5f9";
+  console.log('t')
 });
 scrollbottomArea.addEventListener("mouseleave", function () {
   bottomMouseIcon.style.opacity = 0;
   bottomMouseIcon.style.color = "#e00203";
+  console.log('a')
 });
 scrollbottomArea.addEventListener("click", function () {
   aboutSect.scrollIntoView({ behavior: "smooth" });

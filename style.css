@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: none;
+  cursor: auto;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -70,6 +70,20 @@ body {
   font-size: 20px;
   opacity: 0;
   transition: 0.3s ease;
+  z-index: 999;
+}
+#cursor-Icons {
+  position: absolute;
+  z-index: 150;
+  top: 0;
+
+  width: 40px;
+  height: 40px;
+  transition: 0.1s ease;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .navigation {
   z-index: 150;
@@ -585,7 +599,7 @@ footer .copy {
   .cursor {
     display: none;
   }
-  .home{
+  .home {
     background-size: cover;
     background-position: center;
   }
