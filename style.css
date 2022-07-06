@@ -151,13 +151,14 @@ nav ul li {
   margin: 0 15px;
 }
 nav ul li:hover {
-  transform: translateY(-3px);
   color: #e00203;
 }
 nav ul li:hover a {
   color: #e00203;
+  letter-spacing: 2px;
 }
 nav ul li a {
+  transition: .3s ease;
   font-size: 1em;
   text-decoration: none;
   font-weight: 400;
